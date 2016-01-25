@@ -85,9 +85,9 @@ def make_scatter_plot(explain, response):
 make_scatter_plot("interface_sc", "ddg_per_1000sasa")
 
 ### 0-center interface_sc
-mean_ddgper1000sasa=df_combined["ddg_per_1000sasa"].mean()
-df_combined["ddg_per_1000sasa_centered"]=df_combined["ddg_per_1000sasa"]-mean_interface_sc
-print(df_combined["ddg_per_1000sasa_centered"].describe())
+mean_interface_sc=df_combined["ddg_per_1000sasa"].mean()
+df_combined["interface_sc_centered"]=df_combined["interface_sc"]-mean_interface_sc
+print(df_combined["interface_sc_centered"].describe())
 
 ### create linear regression model
 print ("OLS regression model for the association between interface shape complementarity and ddg per 1000 SolventAccessaibleSurfaceArea")
